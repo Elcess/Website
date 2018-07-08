@@ -1,5 +1,5 @@
 =======
-baseurl = "https://www.kimberleyelcess.com/"
+baseurl = "/"
 languageCode = "en-us"
 title = "Kimberley's website"
 theme = "hugo-lithium"
