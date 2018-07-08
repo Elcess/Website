@@ -1,9 +1,4 @@
-<<<<<<< HEAD
----
-site: blogdown:::blogdown_site
----
 =======
 ---
 site: blogdown:::blogdown_site
 ---
->>>>>>> origin/master
