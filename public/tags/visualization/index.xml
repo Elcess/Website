@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visualization on Kimberley&#39;s website</title>
+    <link>/tags/visualization/</link>
+    <description>Recent content in Visualization on Kimberley&#39;s website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Visualizing US Birth Rate from 1998 to 2015</title>
+      <link>/2017/05/05/visualizing-us-birth-rate-from-1998-to-2015/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/05/visualizing-us-birth-rate-from-1998-to-2015/</guid>
+      <description>To explore the relationship between economic factors and birth rate, chart US birth rate over a time period with changing economic conditions.
+Project OverviewDataPreviously gathered and tidied data on US births by State and year were read into a programming environment.
+TechnologiesThe R programming language was used to read, transform, and plot data. Packages used included plyr, dplyr, data.table, and ggplot2, all from the tidyverse.
+TechniquesData files in several formats were read into a programming environment.</description>
+    </item>
+    
+    <item>
+      <title>Visualizing Birth Rates and Economic Indicators from 1998 to 2015</title>
+      <link>/2015/05/06/visualizing-birth-rates-and-economic-indicators-from-1998-to-2015/</link>
+      <pubDate>Wed, 06 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/2015/05/06/visualizing-birth-rates-and-economic-indicators-from-1998-to-2015/</guid>
+      <description>To explore the relationship between economic factors and birth rate, chart birth rate and economic indicators for several regions over a time period with changing economic conditions.
+Project OverviewDataPreviously gathered data on birth rates and gross domestic product (GDP) per capita for the period 1998–2015 were tidied using a spreadsheet program and then read into a programming environment.
+TechnologiesSome downloaded data were reformed into a tidy data file using Microsoft Excel.</description>
+    </item>
+    
+  </channel>
+</rss>

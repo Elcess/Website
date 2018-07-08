@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.42.1" />
+
+
+<title>Downloading Data from World Bank and US Government Websites - Kimberley&#39;s website</title>
+<meta property="og:title" content="Downloading Data from World Bank and US Government Websites - Kimberley&#39;s website">
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/HomeImage.jpg"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="https://github.com/Elcess">GitHub</a></li>
+    
+    <li><a href="https://www.linkedin.com/in/kimberleyelcess/">LinkedIn</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">4 min read</span>
+    
+
+    <h1 class="article-title">Downloading Data from World Bank and US Government Websites</h1>
+
+    
+    <span class="article-date">2018/07/01</span>
+    
+
+    <div class="article-content">
+      
+
+<p>To explore the relationship between economic factors and birth rate, locate and download economic indicator and birth rate data.</p>
+
+<h1 id="project-overview">Project Overview</h1>
+
+<h2 id="data">Data</h2>
+
+<p>Data on gross domestic product and birth rate for the world, the United States of America, and five groups of countries aggregated by income was located on the World Bank Data Bank website. Data for the period 1998-2015 was downloaded in comma-separated value (CSV) format. Information on birth rate by US State was obtained from the Centers for Disease Control’s WONDER engine in text format for the period 2003-2015. Number of births by US State was available for the period 1995-2002. State population estimates were downloaded from the US Census Bureau’s site in a variety of formats, as was <em>per capita</em> income for the period 1967-2015.</p>
+
+<h2 id="technologies">Technologies</h2>
+
+<p>Files were extracted from the compressed downloads using WinZip. Unzipped files were examined using either a text editor or Microsoft Excel.</p>
+
+<h2 id="techniques">Techniques</h2>
+
+<p>Headers for the text files were edited to remove whitespace. Excel and CSV files were checked for extraneous information and edited to create software-friendly headers before being saved in CSV format. Small datasets in tabular format were separated into different tables and reformed into time series format.</p>
+
+<h2 id="software">Software</h2>
+
+<p>Data was downloaded to a desktop computer running Windows. Notepad and Excel were used to edit data headers.</p>
+
+<h2 id="lessons-learned">Lessons Learned</h2>
+
+<p>Three separate websites were accessed to obtain required data. After decompression, data was stored in three different formats. Data coverage varied by year, with data from more recent periods being more complete.</p>
+
+<h2 id="applications">Applications</h2>
+
+<p>Governments and non-governmental organizations (NGOs) such as the World Bank make a wealth of information available for public use, but it is not consistently formatted. Organizations that provide for tailored download of data products include the CDC and the World Bank.</p>
+
+<h1 id="Background">Project Background</h1>
+
+<p>A Pew Research Center report published April 6, 2010 linked a decline in the US birth rate to the recession of 2008. They used birth data from 25 US States for which 2008 full-year records were available. This project was intended to obtain data that could be used to investigate whether the trend was localized to the US and to see if the birth rate increased after the initial drop.</p>
+
+<h1 id="Step1">Step 1 – Locating the Data</h1>
+
+<p>Prior knowledge indicated that the World Bank’s website would offer economic indicator information for many countries. A web search for US birth rate led to the CDC website and WONDER. A lack of birth rate data from that site occasioned a second search for US State populations by year, which data was found on the US Census Bureau site. On that site, additional browsing uncovered data on <em>per capita</em> income for several years.</p>
+
+<h1 id="Step2">Step 2 – Exporting the Data</h1>
+
+<p>The World Bank offers a download service providing CSV files with data and explanations stored separately. For this project, three measures were selected: Birth rate, crude (per 1,000 people); Gross Domestic Product (GDP) per capita (current US\$); and GDP per capita, adjusted for purchasing power parity (PPP) (current international \$). These series were gathered for the period from 1998 through 2015 for seven regions: high income countries; low income countries; lower middle income countries; middle income countries; upper middle income countries; the United States of America; and the world. Data was downloaded from <a href="http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators">http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators</a>, and had last been updated 17-APR-2017.<br />
+WONDER allows users to choose which measures are to be included and how they are to be grouped. The chosen data may then be stored in a text file. Data on natality were downloaded from <a href="https://wonder.cdc.gov/natality-v2002.html">https://wonder.cdc.gov/natality-v2002.html</a> for the years 1995-2002, <a href="https://wonder.cdc.gov/natality-v2006.html">https://wonder.cdc.gov/natality-v2006.html</a> for the years 2003-2006, and <a href="https://wonder.cdc.gov/natality-current.html">https://wonder.cdc.gov/natality-current.html</a> for the years 2007-2015.<br />
+Census data is available in several different formats depending on the age of the information. Excel and CSV formats are most common. State population projections based on 1990 Census data were downloaded from <a href="https://www.census.gov/population/projections/data/state/st_yr95to00.html">https://www.census.gov/population/projections/data/state/st_yr95to00.html</a> for the years 1995 through 2000 and from <a href="https://www.census.gov/population/projections/data/state/st_yr01to05.html">https://www.census.gov/population/projections/data/state/st_yr01to05.html</a> for the years 2001 through 2005. Information on per capita income was downloaded from <a href="https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-income-people.html">https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-income-people.html</a> for the period 1967 through 2015.</p>
+
+<h1 id="Step3">Step 3 – Cleaning the data</h1>
+
+<p>Downloaded compressed files were unzipped and examined using either Excel or Notepad. World Bank files contained citation information and whitespace in the header text. Both were removed, and the headers replaced with contiguous text. CDC text files also contained whitespace in some column headers, which was removed. Census data was structured differently depending on the file. In general, headers were regularized and citation information removed.</p>
+
+<h1 id="Conclusion">Conclusion</h1>
+
+<p>Data is widely available on the web, but it must be discovered. Downloaded information is not generally usable as-is, but small data files can be made ready for use by editing in word processing and spreadsheet programs.</p>
+
+<h1 id="Related">Related Projects</h1>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,27 @@
+﻿Country Name,Country Code,Series Name,Series Code,2002 [YR2002],2003 [YR2003]
+High income,HIC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,11.8201736532774,11.8194841315567
+High income,HIC,GDP per capita (current US$),NY.GDP.PCAP.CD,26140.3836069088,29122.7581582489
+High income,HIC,"GDP per capita, PPP (current international $)",NY.GDP.PCAP.PP.CD,29580.0027839895,30540.4786936758
+Low income,LIC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,41.3765567918987,41.0002864742688
+Low income,LIC,GDP per capita (current US$),NY.GDP.PCAP.CD,247.018373916101,263.644874058727
+Low income,LIC,"GDP per capita, PPP (current international $)",NY.GDP.PCAP.PP.CD,906.111164011815,929.012980286275
+Lower middle income,LMC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,26.6611800368544,26.3324844095591
+Lower middle income,LMC,GDP per capita (current US$),NY.GDP.PCAP.CD,600.989398125563,678.064484192898
+Lower middle income,LMC,"GDP per capita, PPP (current international $)",NY.GDP.PCAP.PP.CD,2777.38403866976,2963.08092233546
+Middle income,MIC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,21.2197977214965,20.9206469430065
+Middle income,MIC,GDP per capita (current US$),NY.GDP.PCAP.CD,1269.62141329835,1417.81651932311
+Middle income,MIC,"GDP per capita, PPP (current international $)",NY.GDP.PCAP.PP.CD,4336.64709280222,4634.19027834127
+Upper middle income,UMC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,15.6660575458064,15.3491748893037
+Upper middle income,UMC,GDP per capita (current US$),NY.GDP.PCAP.CD,1951.94583001721,2179.18628230419
+Upper middle income,UMC,"GDP per capita, PPP (current international $)",NY.GDP.PCAP.PP.CD,5940.37448372777,6367.81669628292
+World,WLD,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,21.0257501530373,20.8042141402331
+World,WLD,GDP per capita (current US$),NY.GDP.PCAP.CD,5516.51253517762,6117.92665177687
+World,WLD,"GDP per capita, PPP (current international $)",NY.GDP.PCAP.PP.CD,8472.7438805787,8834.98556549014
+United States,USA,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,14,14.1
+United States,USA,GDP per capita (current US$),NY.GDP.PCAP.CD,38166.0378407812,39677.1983481058
+United States,USA,"GDP per capita, PPP (current international $)",NY.GDP.PCAP.PP.CD,38166.0378407812,39677.1983481058
+,,,,,
+,,,,,
+,,,,,
+Data from database: World Development Indicators,,,,,
+Last Updated: 04/17/2017,,,,,

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kimberley&#39;s website</title>
+    <link>/</link>
+    <description>Recent content on Kimberley&#39;s website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>This is a test website using the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>/2018/06/21/about-me/</link>
+      <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/06/21/about-me/</guid>
+      <description>I am an engineer / scientist by training and a patent agent by profession. I studied Materials Science and Engineering (chemistry, physics, and engineering) at the Massachusetts Institute of Technology. As an undergraduate I learned about many different materials, such as metals, ceramics, polymers, and semiconductors. I did my graduate work on electronic materials, like those used in integrated circuits and electronic devices. Later I got my MBA at INSEAD in Fontainebleau, France.</description>
+    </item>
+    
+    <item>
+      <title>Downloading Data from World Bank and US Government Websites</title>
+      <link>/2017/05/05/downloading-data-from-world-bank-and-us-government-websites/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/05/downloading-data-from-world-bank-and-us-government-websites/</guid>
+      <description>To explore the relationship between economic factors and birth rate, locate and download economic indicator and birth rate data.
+Project OverviewDataData on gross domestic product and birth rate for the world, the United States of America, and five groups of countries aggregated by income was located on the World Bank Data Bank website. Data for the period 1998-2015 was downloaded in comma-separated value (CSV) format. Information on birth rate by US State was obtained from the Centers for Disease Controlb</description>
+    </item>
+    
+    <item>
+      <title>Visualizing US Birth Rate from 1998 to 2015</title>
+      <link>/2017/05/05/visualizing-us-birth-rate-from-1998-to-2015/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/05/visualizing-us-birth-rate-from-1998-to-2015/</guid>
+      <description>To explore the relationship between economic factors and birth rate, chart US birth rate over a time period with changing economic conditions.
+Project OverviewDataPreviously gathered and tidied data on US births by State and year were read into a programming environment.
+TechnologiesThe R programming language was used to read, transform, and plot data. Packages used included plyr, dplyr, data.table, and ggplot2, all from the tidyverse.
+TechniquesData files in several formats were read into a programming environment.</description>
+    </item>
+    
+    <item>
+      <title>A Plain Markdown Post</title>
+      <link>/2016/12/30/a-plain-markdown-post/</link>
+      <pubDate>Fri, 30 Dec 2016 21:49:57 -0700</pubDate>
+      
+      <guid>/2016/12/30/a-plain-markdown-post/</guid>
+      <description>This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
+ You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc.  There are many differences in syntax between Blackfriday&amp;rsquo;s Markdown and Pandoc&amp;rsquo;s Markdown.</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/2015/07/23/hello-r-markdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/2015/07/23/hello-r-markdown/</guid>
+      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+    </item>
+    
+    <item>
+      <title>Visualizing Birth Rates and Economic Indicators from 1998 to 2015</title>
+      <link>/2015/05/06/visualizing-birth-rates-and-economic-indicators-from-1998-to-2015/</link>
+      <pubDate>Wed, 06 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/2015/05/06/visualizing-birth-rates-and-economic-indicators-from-1998-to-2015/</guid>
+      <description>To explore the relationship between economic factors and birth rate, chart birth rate and economic indicators for several regions over a time period with changing economic conditions.
+Project OverviewDataPreviously gathered data on birth rates and gross domestic product (GDP) per capita for the period 1998–2015 were tidied using a spreadsheet program and then read into a programming environment.
+TechnologiesSome downloaded data were reformed into a tidy data file using Microsoft Excel.</description>
+    </item>
+    
+    <item>
+      <title>Lorem Ipsum</title>
+      <link>/2015/01/01/lorem-ipsum/</link>
+      <pubDate>Thu, 01 Jan 2015 13:09:13 -0600</pubDate>
+      
+      <guid>/2015/01/01/lorem-ipsum/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on Kimberley&#39;s website</title>
+    <link>/categories/introduction/</link>
+    <description>Recent content in Introduction on Kimberley&#39;s website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/introduction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>This is a test website using the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>/2018/06/21/about-me/</link>
+      <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/06/21/about-me/</guid>
+      <description>I am an engineer / scientist by training and a patent agent by profession. I studied Materials Science and Engineering (chemistry, physics, and engineering) at the Massachusetts Institute of Technology. As an undergraduate I learned about many different materials, such as metals, ceramics, polymers, and semiconductors. I did my graduate work on electronic materials, like those used in integrated circuits and electronic devices. Later I got my MBA at INSEAD in Fontainebleau, France.</description>
+    </item>
+    
+  </channel>
+</rss>
