@@ -1,4 +1,4 @@
----
+﻿---
 title: Visualizing US Birth Rate from 1998 to 2015
 author: Elcess
 date: '2017-05-05'
@@ -45,13 +45,13 @@ Visualization is an important part of exploratory data analysis and communicatin
 
 A Pew Research Center report published April 6, 2010[^1] linked a decline in the US birth rate to the recession of 2008. They used birth data from 25 US States for which 2008 full-year records were available. This project was intended to investigate whether the trend was generalized to all 50 States and to see if the birth rate increased after the initial drop.  
 
-[^1]: Gretchen Livingston and D’Vera Cohn, *U.S. Birth Rate Decline Linked to Recession*,  <http://www.pewsocialtrends.org/2010/04/06/us-birth-rate-decline-linked-to-recession/>.  
+[^1]: Gretchen Livingston and D'Vera Cohn, *U.S. Birth Rate Decline Linked to Recession*,  <http://www.pewsocialtrends.org/2010/04/06/us-birth-rate-decline-linked-to-recession/>.  
 
 # Step 1 -- Extracting the Data {#Step1}  
 
 Population projections by State for the period 1998–2002 were stored in fixed-width format text files. This was read into R data frames and stored for later use.  
 
-```{r read-pops}
+```{r read-pops, message = FALSE, warning = FALSE}
 library(tidyverse)
 
 iwidths <- c(2, 1, 4, 2, rep(8, 16))
@@ -142,7 +142,7 @@ for(st in st50) {
 
 Births by State for the period 1998–2002 were stored in tab-delimited text files. Births, total population, and crude birth rate (births per 1,000 people) by State for the period 2003–2015 were stored in tab-delimited text files. This data was read into R data frames and stored for later use.  
 
-```{r read-births}
+```{r read-births, message = FALSE, warning = FALSE}
 
 births9502 <- read.delim(file = "1995-2002Births.txt")
 births9502 <- births9502[1:408,]
@@ -161,7 +161,7 @@ births0715 <- select(births0715, Year, State, Births, TotalPopulation, BirthRate
 
 Two population projections were provided by race, Hispanic origin, and gender by single year of age for each state for each year from 1995–2005. Projection data was summed by individual projection to obtain total population by State for the years 1998–2002, and data from all States was combined into a single data frame. Data prepared this way for Alaska in 2003 was compared with the total Alaska population for 2003 in the CDC natality file for 2003–2006, and the Series B projection was a closer fit. The Series B population projections were then used for all States from 1998–2002 for subsequent analysis.  
 
-```{r}
+```{r message = FALSE, warning = FALSE}
 ## Prepare to join based on state name in natality data
 st50 <- tibble(StateCode = state.abb, State = state.name)
 stpops <- inner_join(stpops, st50)
@@ -174,7 +174,7 @@ stpopsB <- select(stpopsB, -Series)
 
 CDC-supplied information on births by State for 1998–2002 were combined with calculated population projections for the same period, and birth rate per 1,000 total population was calculated. This time period was then combined with births and birth rate data for 2003–2015 into a single dataset. State abbreviations were added to the dataset by joining it with the built-in “state” dataset from R. A subset of this dataset was created by selecting data for only the 25 States whose data was used in the Pew study in order to explore potential differences in calculated birth rate over time due to selection bias.  
 
-```{r}
+```{r message = FALSE, warning = FALSE}
 ## Join state populations and calculate birth rate (also removes DC)
 births9502 <- inner_join(stpopsB, births9502) %>%
         mutate(BirthRate = Births / Pop * 1000)
@@ -195,7 +195,7 @@ births <- arrange(births, Year, State)
 
 The average US birth rate by year was obtained by summing the births and total State populations over all States and calculating the birth rate per 1,000 total population. The average birth rate by year for the 25 States whose data was used in the Pew study was obtained by summing the births and total State populations over those States and calculating the birth rate per 1,000 total population. Note that this gives "Crude Birth Rate" and not "General Fertility Rate."  
 
-```{r}
+```{r message = FALSE, warning = FALSE}
 USbirths <- summarise(group_by(births, Year), sum(Births), sum(TotalPopulation))
 names(USbirths) <- c("Year", "Births", "TotalPopulation")
 USbirths <- mutate(USbirths, BirthRate = Births / TotalPopulation * 1000)
@@ -208,7 +208,7 @@ save(USbirths, file = "USbirths.RData")
 
 Birth rates for each State were first plotted as time series using the ggplot2 package for R and then a step-wise line showing the US average was overlaid on the base plot.  
 
-```{r plot-US}
+```{r plot-US, message = FALSE, warning = FALSE}
 ggplot(births, aes(Year, BirthRate, color = StateCode)) + geom_point() +
         geom_step(data = USbirths, aes(x=Year, y=BirthRate, color="US",
                                         size=1), show.legend = FALSE) +
@@ -222,7 +222,7 @@ ggplot(births, aes(Year, BirthRate, color = StateCode)) + geom_point() +
 The overall US birth rate did decline sharply beginning in 2008 and has not appreciably increased since the decline began.  
 Average birth rate for the 25 States whose data was used in the Pew study was plotted against the average US birth rate for the same time period. The plot shows that the Pew average is consistently lower than the US average, although the differences are minor. The diagonal line shows where the points would fall if the two rates were identical.  
 
-```{r plot-Pew}
+```{r plot-Pew, message = FALSE, warning = FALSE}
 ## See if Pew states are different
 pewstates <- c("AL", "AZ", "CA", "CO", "FL", "HI", "IA", "ID", "KS", "MD",
                "MI", "MN", "MO", "MS", "NC", "ND", "NE", "NH", "PA", "SD",
