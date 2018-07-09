@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://www.kimberleyelcess.com/"
 languageCode = "en-us"
 title = "Kimberley's website"
 theme = "hugo-lithium"

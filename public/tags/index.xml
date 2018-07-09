@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Kimberley&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Data</title>
       <link>/tags/data/</link>
-      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 06 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/data/</guid>
       <description></description>
@@ -32,34 +32,16 @@
     <item>
       <title>Plot</title>
       <link>/tags/plot/</link>
-      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 06 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/plot/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/r-markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Regression</title>
-      <link>/tags/regression/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/regression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Visualization</title>
       <link>/tags/visualization/</link>
-      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 06 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/visualization/</guid>
       <description></description>

@@ -1,26 +1,80 @@
----
-title: Visualizing Birth Rates and Economic Indicators from 1998 to 2015
-author: Elcess
-date: '2015-05-06'
-slug: visualizing-birth-rates-and-economic-indicators-from-1998-to-2015
-categories:
-  - data science
-  - R
-  - ETL
-tags:
-  - data
-  - plot
-  - visualization
----
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.42.2" />
+
+
+<title>Visualizing Birth Rates and Economic Indicators from 1998 to 2015 - Kimberley&#39;s website</title>
+<meta property="og:title" content="Visualizing Birth Rates and Economic Indicators from 1998 to 2015 - Kimberley&#39;s website">
 
 
 
-<p>To explore the relationship between economic factors and birth rate, chart birth rate and economic indicators for several regions over a time period with changing economic conditions.</p>
+  
+
+
+
+
+
+
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/HomeImage.jpg"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="https://github.com/Elcess">GitHub</a></li>
+    
+    <li><a href="https://www.linkedin.com/in/kimberleyelcess/">LinkedIn</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">4 min read</span>
+    
+
+    <h1 class="article-title">Visualizing Birth Rates and Economic Indicators from 1998 to 2015</h1>
+
+    
+    <span class="article-date">2017/05/06</span>
+    
+
+    <div class="article-content">
+      <p>To explore the relationship between economic factors and birth rate, chart birth rate and economic indicators for several regions over a time period with changing economic conditions.</p>
 <div id="project-overview" class="section level1">
 <h1>Project Overview</h1>
 <div id="data" class="section level2">
 <h2>Data</h2>
-<p>Previously gathered data on birth rates and gross domestic product (GDP) <em>per capita</em> for the period 1998–2015 were tidied using a spreadsheet program and then read into a programming environment.</p>
+<p>Previously gathered data on birth rates and gross domestic product (GDP) <em>per capita</em> for the period 1998b</p>
 </div>
 <div id="technologies" class="section level2">
 <h2>Technologies</h2>
@@ -28,7 +82,7 @@ tags:
 </div>
 <div id="techniques" class="section level2">
 <h2>Techniques</h2>
-<p>Downloaded data was reformed into a tidy dataset by transposing rows and columns and moving from a “wide” format to a “long” format. Tidied data was then saved to a comma-separated values (CSV) file that was subsequently read into the R programming environment. Data were plotted as time series and as comparison scatter plots using the ggplot2 package for R.</p>
+<p>Downloaded data was reformed into a tidy dataset by transposing rows and columns and moving from a b</p>
 </div>
 <div id="software" class="section level2">
 <h2>Software</h2>
@@ -70,28 +124,28 @@ names(wbdata) &lt;- c(&quot;Year&quot;, &quot;Region&quot;, &quot;RegionCode&quo
 </div>
 <div id="Step3" class="section level1">
 <h1>Step 3 – Visualizing the Data</h1>
-<p>Birth rates for each region were first plotted as time series using the <code>ggplot2</code> package for R to see if the drop in birth rate after 2008 seen in previously investigated US data was replicated elsewhere. While birth rates generally declined worldwide for the period 1998–2015, only higher income regions experienced the sharp drop seen in the US. Worldwide there was an excess decrease after 2008, but the general trendline did not change significantly.</p>
+<p>Birth rates for each region were first plotted as time series using the <code>ggplot2</code> package for R to see if the drop in birth rate after 2008 seen in previously investigated US data was replicated elsewhere. While birth rates generally declined worldwide for the period 1998b</p>
 <pre class="r"><code>ggplot(wbdata, aes(Year, BirthRate, color = Region)) + geom_point() +
         labs(title = &quot;Crude Birth Rate by Region&quot;,
              x = &quot;Year&quot;,
              y = &quot;Births per 1,000 People&quot;,
              color = &quot;UN Region&quot;)</code></pre>
-<p><img src="/post/2015-05-06-visualizing-birth-rates-and-economic-indicators-from-1998-to-2015_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="/post/2017-05-06-visualizing-birth-rates-and-economic-indicators-from-1998-to-2015_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p>Crude birth rate was then plotted vs. <em>per capita</em> GDP (current $, compared by Purchasing Power Parity (PPP)).</p>
 <pre class="r"><code>ggplot(wbdata, aes(GDPpcPPP, BirthRate, color = Region)) + geom_point() +
         labs(title = &quot;Crude Birth Rate Compared to GDP Per Capita&quot;,
              x = &quot;GDP Per Capita (Purchasing Power Parity, Current $)&quot;,
              y = &quot;Births per 1,000 People&quot;,
              color = &quot;UN Region&quot;)</code></pre>
-<p><img src="/post/2015-05-06-visualizing-birth-rates-and-economic-indicators-from-1998-to-2015_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="/post/2017-05-06-visualizing-birth-rates-and-economic-indicators-from-1998-to-2015_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>The birth rate appears to be strongly inversely correlated with the average wealth of a region, particularly for poor regions. Any effect of worldwide economic events could easily be masked by this relationship.</p>
-<p>To see if the 2008 recession affected all regions, <em>per capita</em> GDP (current $, PPP) was plotted for the period 1998–2015.</p>
+<p>To see if the 2008 recession affected all regions, <em>per capita</em> GDP (current $, PPP) was plotted for the period 1998b</p>
 <pre class="r"><code>ggplot(wbdata, aes(Year, GDPpcPPP, color = Region)) + geom_point() +
         labs(title = &quot;Evolution of GDP Per Capita&quot;,
              x = &quot;Year&quot;,
              y = &quot;GDP Per Capita (Purchasing Power Parity, Current $)&quot;,
              color = &quot;UN Region&quot;)</code></pre>
-<p><img src="/post/2015-05-06-visualizing-birth-rates-and-economic-indicators-from-1998-to-2015_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="/post/2017-05-06-visualizing-birth-rates-and-economic-indicators-from-1998-to-2015_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>Low, lower middle, and middle income regions seemed hardly touched by the 2008 economic downturn as their trends toward increasing wealth continued. The US appears to have been the most strongly affected region, followed by the group of high income regions. In all affected regions, wealth regained its pre-shock level by 2010 or 2011.</p>
 </div>
 <div id="Conclusion" class="section level1">
@@ -102,6 +156,50 @@ names(wbdata) &lt;- c(&quot;Year&quot;, &quot;Region&quot;, &quot;RegionCode&quo
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Gretchen Livingston and D’Vera Cohn, <em>U.S. Birth Rate Decline Linked to Recession</em>, <a href="http://www.pewsocialtrends.org/2010/04/06/us-birth-rate-decline-linked-to-recession/" class="uri">http://www.pewsocialtrends.org/2010/04/06/us-birth-rate-decline-linked-to-recession/</a>.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>Gretchen Livingston and Db<a href="#fnref1">↩</a></p></li>
 </ol>
 </div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+
