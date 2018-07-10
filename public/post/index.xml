@@ -27,8 +27,8 @@
       
       <guid>/2017/05/06/visualizing-birth-rates-and-economic-indicators-from-1998-to-2015/</guid>
       <description>To explore the relationship between economic factors and birth rate, chart birth rate and economic indicators for several regions over a time period with changing economic conditions.
-Project OverviewDataPreviously gathered data on birth rates and gross domestic product (GDP) per capita for the period 1998b
-TechnologiesSome downloaded data were reformed into a tidy data file using Microsoft Excel. The R programming language was used to read and plot data.</description>
+Project OverviewDataPreviously gathered data on birth rates and gross domestic product (GDP) per capita for the period 1998-2015 were tidied using a spreadsheet program and then read into a programming environment.
+TechnologiesSome downloaded data were reformed into a tidy data file using Microsoft Excel.</description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@ Project OverviewDataPreviously gathered data on birth rates and gross domestic
       
       <guid>/2017/05/05/downloading-data-from-world-bank-and-us-government-websites/</guid>
       <description>To explore the relationship between economic factors and birth rate, locate and download economic indicator and birth rate data.
-Project OverviewDataData on gross domestic product and birth rate for the world, the United States of America, and five groups of countries aggregated by income was located on the World Bank Data Bank website. Data for the period 1998-2015 was downloaded in comma-separated value (CSV) format. Information on birth rate by US State was obtained from the Centers for Disease Controlb</description>
+Project OverviewDataData on gross domestic product and birth rate for the world, the United States of America, and five groups of countries aggregated by income was located on the World Bank Data Bank website. Data for the period 1998-2015 was downloaded in comma-separated value (CSV) format. Information on birth rate by US State was obtained from the Centers for Disease Control’s WONDER engine in text format for the period 2003-2015.</description>
     </item>
     
     <item>

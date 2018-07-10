@@ -1,4 +1,4 @@
-﻿---
+---
 title: Visualizing US Birth Rate from 1998 to 2015
 author: Elcess
 date: '2017-05-05'
@@ -49,7 +49,7 @@ A Pew Research Center report published April 6, 2010[^1] linked a decline in the
 
 # Step 1 -- Extracting the Data {#Step1}  
 
-Population projections by State for the period 1998–2002 were stored in fixed-width format text files. This was read into R data frames and stored for later use.  
+Population projections by State for the period 1998-2002 were stored in fixed-width format text files. This was read into R data frames and stored for later use.  
 
 ```{r read-pops, message = FALSE, warning = FALSE}
 library(tidyverse)
@@ -140,7 +140,7 @@ for(st in st50) {
 
 ```
 
-Births by State for the period 1998–2002 were stored in tab-delimited text files. Births, total population, and crude birth rate (births per 1,000 people) by State for the period 2003–2015 were stored in tab-delimited text files. This data was read into R data frames and stored for later use.  
+Births by State for the period 1998-2002 were stored in tab-delimited text files. Births, total population, and crude birth rate (births per 1,000 people) by State for the period 2003-2015 were stored in tab-delimited text files. This data was read into R data frames and stored for later use.  
 
 ```{r read-births, message = FALSE, warning = FALSE}
 
@@ -159,7 +159,7 @@ births0715 <- select(births0715, Year, State, Births, TotalPopulation, BirthRate
 
 # Step 2 -- Transforming the Data {#Step2}  
 
-Two population projections were provided by race, Hispanic origin, and gender by single year of age for each state for each year from 1995–2005. Projection data was summed by individual projection to obtain total population by State for the years 1998–2002, and data from all States was combined into a single data frame. Data prepared this way for Alaska in 2003 was compared with the total Alaska population for 2003 in the CDC natality file for 2003–2006, and the Series B projection was a closer fit. The Series B population projections were then used for all States from 1998–2002 for subsequent analysis.  
+Two population projections were provided by race, Hispanic origin, and gender by single year of age for each state for each year from 1995-2005. Projection data was summed by individual projection to obtain total population by State for the years 1998-2002, and data from all States was combined into a single data frame. Data prepared this way for Alaska in 2003 was compared with the total Alaska population for 2003 in the CDC natality file for 2003-2006, and the Series B projection was a closer fit. The Series B population projections were then used for all States from 1998-2002 for subsequent analysis.  
 
 ```{r message = FALSE, warning = FALSE}
 ## Prepare to join based on state name in natality data
@@ -172,7 +172,7 @@ stpopsB <- select(stpopsB, -Series)
 
 ```
 
-CDC-supplied information on births by State for 1998–2002 were combined with calculated population projections for the same period, and birth rate per 1,000 total population was calculated. This time period was then combined with births and birth rate data for 2003–2015 into a single dataset. State abbreviations were added to the dataset by joining it with the built-in “state” dataset from R. A subset of this dataset was created by selecting data for only the 25 States whose data was used in the Pew study in order to explore potential differences in calculated birth rate over time due to selection bias.  
+CDC-supplied information on births by State for 1998-2002 were combined with calculated population projections for the same period, and birth rate per 1,000 total population was calculated. This time period was then combined with births and birth rate data for 2003-2015 into a single dataset. State abbreviations were added to the dataset by joining it with the built-in `state` dataset from R. A subset of this dataset was created by selecting data for only the 25 States whose data was used in the Pew study in order to explore potential differences in calculated birth rate over time due to selection bias.  
 
 ```{r message = FALSE, warning = FALSE}
 ## Join state populations and calculate birth rate (also removes DC)

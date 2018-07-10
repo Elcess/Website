@@ -1,4 +1,5 @@
 ---
+draft: yes
 title: Visualizing US Birth Rate from 1998 to 2015
 author: Elcess
 date: '2017-05-05'
@@ -49,17 +50,10 @@ tags:
 </div>
 <div id="Step1" class="section level1">
 <h1>Step 1 – Extracting the Data</h1>
-<p>Population projections by State for the period 1998–2002 were stored in fixed-width format text files. This was read into R data frames and stored for later use.</p>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## -- Attaching packages --------------------------------------------------------------------------------- tidyverse 1.2.1 --</code></pre>
-<pre><code>## v ggplot2 2.2.1     v purrr   0.2.5
-## v tibble  1.4.2     v dplyr   0.7.5
-## v tidyr   0.8.1     v stringr 1.3.1
-## v readr   1.1.1     v forcats 0.3.0</code></pre>
-<pre><code>## -- Conflicts ------------------------------------------------------------------------------------ tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code>iwidths &lt;- c(2, 1, 4, 2, rep(8, 16))
+<p>Population projections by State for the period 1998-2002 were stored in fixed-width format text files. This was read into R data frames and stored for later use.</p>
+<pre class="r"><code>library(tidyverse)
+
+iwidths &lt;- c(2, 1, 4, 2, rep(8, 16))
 cols &lt;- c(&quot;State&quot;, &quot;Series&quot;, &quot;Year&quot;, &quot;Age&quot;, &quot;WNHM&quot;, &quot;WNHF&quot;, &quot;WHM&quot;, &quot;WHF&quot;,
           &quot;BNHM&quot;, &quot;BNHF&quot;, &quot;BHM&quot;, &quot;BHF&quot;, &quot;AINHM&quot;, &quot;AINHF&quot;, &quot;AIHM&quot;, &quot;AIHF&quot;,
           &quot;APNHM&quot;, &quot;APNHF&quot;, &quot;APHM&quot;, &quot;APHF&quot;)
@@ -142,7 +136,7 @@ for(st in st50) {
                     tibble(Year=2000, StateCode=st, Series=&quot;B&quot;,
                            Pop=st2000Btotal))
 }</code></pre>
-<p>Births by State for the period 1998–2002 were stored in tab-delimited text files. Births, total population, and crude birth rate (births per 1,000 people) by State for the period 2003–2015 were stored in tab-delimited text files. This data was read into R data frames and stored for later use.</p>
+<p>Births by State for the period 1998-2002 were stored in tab-delimited text files. Births, total population, and crude birth rate (births per 1,000 people) by State for the period 2003-2015 were stored in tab-delimited text files. This data was read into R data frames and stored for later use.</p>
 <pre class="r"><code>births9502 &lt;- read.delim(file = &quot;1995-2002Births.txt&quot;)
 births9502 &lt;- births9502[1:408,]
 births0306 &lt;- read.delim(file = &quot;2003-2006Births.txt&quot;, nrows = 204)
@@ -156,31 +150,25 @@ births0715 &lt;- select(births0715, Year, State, Births, TotalPopulation, BirthR
 </div>
 <div id="Step2" class="section level1">
 <h1>Step 2 – Transforming the Data</h1>
-<p>Two population projections were provided by race, Hispanic origin, and gender by single year of age for each state for each year from 1995–2005. Projection data was summed by individual projection to obtain total population by State for the years 1998–2002, and data from all States was combined into a single data frame. Data prepared this way for Alaska in 2003 was compared with the total Alaska population for 2003 in the CDC natality file for 2003–2006, and the Series B projection was a closer fit. The Series B population projections were then used for all States from 1998–2002 for subsequent analysis.</p>
+<p>Two population projections were provided by race, Hispanic origin, and gender by single year of age for each state for each year from 1995-2005. Projection data was summed by individual projection to obtain total population by State for the years 1998-2002, and data from all States was combined into a single data frame. Data prepared this way for Alaska in 2003 was compared with the total Alaska population for 2003 in the CDC natality file for 2003-2006, and the Series B projection was a closer fit. The Series B population projections were then used for all States from 1998-2002 for subsequent analysis.</p>
 <pre class="r"><code>## Prepare to join based on state name in natality data
 st50 &lt;- tibble(StateCode = state.abb, State = state.name)
-stpops &lt;- inner_join(stpops, st50)</code></pre>
-<pre><code>## Joining, by = &quot;StateCode&quot;</code></pre>
-<pre class="r"><code>## Use Series B projections because they are closer for AK 2003
+stpops &lt;- inner_join(stpops, st50)
+
+## Use Series B projections because they are closer for AK 2003
 stpopsB &lt;- filter(stpops, Series == &quot;B&quot;)
 stpopsB &lt;- select(stpopsB, -Series)</code></pre>
-<p>CDC-supplied information on births by State for 1998–2002 were combined with calculated population projections for the same period, and birth rate per 1,000 total population was calculated. This time period was then combined with births and birth rate data for 2003–2015 into a single dataset. State abbreviations were added to the dataset by joining it with the built-in “state” dataset from R. A subset of this dataset was created by selecting data for only the 25 States whose data was used in the Pew study in order to explore potential differences in calculated birth rate over time due to selection bias.</p>
+<p>CDC-supplied information on births by State for 1998-2002 were combined with calculated population projections for the same period, and birth rate per 1,000 total population was calculated. This time period was then combined with births and birth rate data for 2003-2015 into a single dataset. State abbreviations were added to the dataset by joining it with the built-in <code>state</code> dataset from R. A subset of this dataset was created by selecting data for only the 25 States whose data was used in the Pew study in order to explore potential differences in calculated birth rate over time due to selection bias.</p>
 <pre class="r"><code>## Join state populations and calculate birth rate (also removes DC)
 births9502 &lt;- inner_join(stpopsB, births9502) %&gt;%
-        mutate(BirthRate = Births / Pop * 1000)</code></pre>
-<pre><code>## Joining, by = c(&quot;Year&quot;, &quot;State&quot;)</code></pre>
-<pre><code>## Warning: Column `State` joining character vector and factor, coercing into
-## character vector</code></pre>
-<pre class="r"><code>names(births9502) &lt;- c(&quot;Year&quot;, &quot;StateCode&quot;, &quot;TotalPopulation&quot;, &quot;State&quot;,
+        mutate(BirthRate = Births / Pop * 1000)
+names(births9502) &lt;- c(&quot;Year&quot;, &quot;StateCode&quot;, &quot;TotalPopulation&quot;, &quot;State&quot;,
                        &quot;Births&quot;, &quot;BirthRate&quot;)
 
 ## Put all birth data into one data frame
 births &lt;- rbind(births0306, births0715)
-births &lt;- inner_join(births, st50)</code></pre>
-<pre><code>## Joining, by = &quot;State&quot;</code></pre>
-<pre><code>## Warning: Column `State` joining factor and character vector, coercing into
-## character vector</code></pre>
-<pre class="r"><code>births &lt;- births[complete.cases(births),]
+births &lt;- inner_join(births, st50)
+births &lt;- births[complete.cases(births),]
 
 births9502 &lt;- mutate(births9502, Year = as.integer(Year)) %&gt;%
         select(Year, State, Births, TotalPopulation, BirthRate, StateCode)

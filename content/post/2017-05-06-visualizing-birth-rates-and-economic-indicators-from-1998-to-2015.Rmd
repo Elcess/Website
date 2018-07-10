@@ -20,7 +20,7 @@ To explore the relationship between economic factors and birth rate, chart birth
 
 ## Data  
 
-Previously gathered data on birth rates and gross domestic product (GDP) *per capita* for the period 1998b 2015 were tidied using a spreadsheet program and then read into a programming environment.  
+Previously gathered data on birth rates and gross domestic product (GDP) *per capita* for the period 1998-2015 were tidied using a spreadsheet program and then read into a programming environment.  
 
 ## Technologies  
 
@@ -28,7 +28,7 @@ Some downloaded data were reformed into a tidy data file using Microsoft Excel. 
 
 ## Techniques  
 
-Downloaded data was reformed into a tidy dataset by transposing rows and columns and moving from a b wideb  format to a b longb  format. Tidied data was then saved to a comma-separated values (CSV) file that was subsequently read into the R programming environment. Data were plotted as time series and as comparison scatter plots using the ggplot2 package for R.  
+Downloaded data was reformed into a tidy dataset by transposing rows and columns and moving from a "wide" format to a "long" format. Tidied data was then saved to a comma-separated values (CSV) file that was subsequently read into the R programming environment. Data were plotted as time series and as comparison scatter plots using the ggplot2 package for R.  
 
 ## Software  
 

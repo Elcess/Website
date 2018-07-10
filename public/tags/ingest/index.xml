@@ -18,7 +18,7 @@
       
       <guid>/2017/05/05/downloading-data-from-world-bank-and-us-government-websites/</guid>
       <description>To explore the relationship between economic factors and birth rate, locate and download economic indicator and birth rate data.
-Project OverviewDataData on gross domestic product and birth rate for the world, the United States of America, and five groups of countries aggregated by income was located on the World Bank Data Bank website. Data for the period 1998-2015 was downloaded in comma-separated value (CSV) format. Information on birth rate by US State was obtained from the Centers for Disease Controlb</description>
+Project OverviewDataData on gross domestic product and birth rate for the world, the United States of America, and five groups of countries aggregated by income was located on the World Bank Data Bank website. Data for the period 1998-2015 was downloaded in comma-separated value (CSV) format. Information on birth rate by US State was obtained from the Centers for Disease Control’s WONDER engine in text format for the period 2003-2015.</description>
     </item>
     
   </channel>

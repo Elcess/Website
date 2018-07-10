@@ -1,4 +1,5 @@
 ---
+draft: yes
 title: Visualizing Birth Rates and Economic Indicators from 1998 to 2015
 author: Elcess
 date: '2017-05-06'
@@ -20,7 +21,7 @@ slug: visualizing-birth-rates-and-economic-indicators-from-1998-to-2015
 <h1>Project Overview</h1>
 <div id="data" class="section level2">
 <h2>Data</h2>
-<p>Previously gathered data on birth rates and gross domestic product (GDP) <em>per capita</em> for the period 1998b</p>
+<p>Previously gathered data on birth rates and gross domestic product (GDP) <em>per capita</em> for the period 1998-2015 were tidied using a spreadsheet program and then read into a programming environment.</p>
 </div>
 <div id="technologies" class="section level2">
 <h2>Technologies</h2>
@@ -28,7 +29,7 @@ slug: visualizing-birth-rates-and-economic-indicators-from-1998-to-2015
 </div>
 <div id="techniques" class="section level2">
 <h2>Techniques</h2>
-<p>Downloaded data was reformed into a tidy dataset by transposing rows and columns and moving from a b</p>
+<p>Downloaded data was reformed into a tidy dataset by transposing rows and columns and moving from a “wide” format to a “long” format. Tidied data was then saved to a comma-separated values (CSV) file that was subsequently read into the R programming environment. Data were plotted as time series and as comparison scatter plots using the ggplot2 package for R.</p>
 </div>
 <div id="software" class="section level2">
 <h2>Software</h2>
@@ -56,8 +57,8 @@ slug: visualizing-birth-rates-and-economic-indicators-from-1998-to-2015
 <p>Previously saved data from R processing was loaded. Data in the CSV file was read into a data frame in R and used for charting.</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
 <pre><code>## -- Attaching packages --------------------------------------------------------------------------------- tidyverse 1.2.1 --</code></pre>
-<pre><code>## v ggplot2 2.2.1     v purrr   0.2.5
-## v tibble  1.4.2     v dplyr   0.7.5
+<pre><code>## v ggplot2 3.0.0     v purrr   0.2.5
+## v tibble  1.4.2     v dplyr   0.7.6
 ## v tidyr   0.8.1     v stringr 1.3.1
 ## v readr   1.1.1     v forcats 0.3.0</code></pre>
 <pre><code>## -- Conflicts ------------------------------------------------------------------------------------ tidyverse_conflicts() --
@@ -70,7 +71,7 @@ names(wbdata) &lt;- c(&quot;Year&quot;, &quot;Region&quot;, &quot;RegionCode&quo
 </div>
 <div id="Step3" class="section level1">
 <h1>Step 3 – Visualizing the Data</h1>
-<p>Birth rates for each region were first plotted as time series using the <code>ggplot2</code> package for R to see if the drop in birth rate after 2008 seen in previously investigated US data was replicated elsewhere. While birth rates generally declined worldwide for the period 1998b</p>
+<p>Birth rates for each region were first plotted as time series using the <code>ggplot2</code> package for R to see if the drop in birth rate after 2008 seen in previously investigated US data was replicated elsewhere. While birth rates generally declined worldwide for the period 1998b 2015, only higher income regions experienced the sharp drop seen in the US. Worldwide there was an excess decrease after 2008, but the general trendline did not change significantly.</p>
 <pre class="r"><code>ggplot(wbdata, aes(Year, BirthRate, color = Region)) + geom_point() +
         labs(title = &quot;Crude Birth Rate by Region&quot;,
              x = &quot;Year&quot;,
@@ -85,7 +86,7 @@ names(wbdata) &lt;- c(&quot;Year&quot;, &quot;Region&quot;, &quot;RegionCode&quo
              color = &quot;UN Region&quot;)</code></pre>
 <p><img src="/post/2017-05-06-visualizing-birth-rates-and-economic-indicators-from-1998-to-2015_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>The birth rate appears to be strongly inversely correlated with the average wealth of a region, particularly for poor regions. Any effect of worldwide economic events could easily be masked by this relationship.</p>
-<p>To see if the 2008 recession affected all regions, <em>per capita</em> GDP (current $, PPP) was plotted for the period 1998b</p>
+<p>To see if the 2008 recession affected all regions, <em>per capita</em> GDP (current $, PPP) was plotted for the period 1998-2015.</p>
 <pre class="r"><code>ggplot(wbdata, aes(Year, GDPpcPPP, color = Region)) + geom_point() +
         labs(title = &quot;Evolution of GDP Per Capita&quot;,
              x = &quot;Year&quot;,
@@ -102,6 +103,6 @@ names(wbdata) &lt;- c(&quot;Year&quot;, &quot;Region&quot;, &quot;RegionCode&quo
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Gretchen Livingston and Db<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>Gretchen Livingston and D’Vera Cohn, <em>U.S. Birth Rate Decline Linked to Recession</em>, <a href="http://www.pewsocialtrends.org/2010/04/06/us-birth-rate-decline-linked-to-recession/" class="uri">http://www.pewsocialtrends.org/2010/04/06/us-birth-rate-decline-linked-to-recession/</a>.<a href="#fnref1">↩</a></p></li>
 </ol>
 </div>
